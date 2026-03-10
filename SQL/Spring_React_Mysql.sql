@@ -1,0 +1,82 @@
+
+create database spring_db;
+use spring_db;
+
+
+
+-- =============================================================================
+-- 테스트용 데이터 삽입
+-- =============================================================================
+-- 쿼리를 날려보자!
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (1, 'MYSQL + SPRING + REACT!!', '데이터베이스 리액트 스프링 연동 성공', '관리자', NOW(), 'none');
+
+-- idx가 AUTO_INCREMENT인데 직접 값을 지정해서 생기는 문제. 
+-- idx를 INSERT 컬럼 목록에서 빼는 것이 가장 깔끔한 해결책.
+
+-- 기존 데이터 삭제
+DELETE FROM spring_db.board;
+DELETE FROM spring_db.board WHERE idx = 1;
+DELETE FROM spring_db.board WHERE idx = 2;
+DELETE FROM spring_db.board WHERE iboardboardboardboarddx = 3;
+DELETE FROM spring_db.board WHERE idx = 4;
+DELETE FROM spring_db.board WHERE idx = 5;
+DELETE FROM spring_db.board WHERE idx = 6;
+DELETE FROM spring_db.board WHERE idx = 12;
+
+-- 테이블에 데이터 삽입
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (2, '풀스택 완성!', '통신 성공!', '관리자', NOW(), 'none');
+-- 이 테이블의 1번 자리는 이미 주인이 있다는 에러 발생 (중복)
+-- 번호표를 2번으로 바꿔서 쿼리를 날려보자!
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (3, 'FULL-STACK-DEV!', '3번 데이터!', '사용자', NOW(), 'none');
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (4, '4번 게시글', '4번 데이터!', '사용자', NOW(), 'none');
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (5, '5번 게시글', '5번 데이터!', '사용자', NOW(), 'none');
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (6, '6번 게시글', '6번 데이터!', '사용자', NOW(), 'none');
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (7, '7번 게시글', '6번 데이터!', '사용자', NOW(), 'none');
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (8, '8번 게시글', '6번 데이터!', '사용자', NOW(), 'none');
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (9, '9번 게시글', '6번 데이터!', '사용자', NOW(), 'none');
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (10, '10번 게시글', '6번 데이터!', '사용자', NOW(), 'none');
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (11, '11번 게시글', '6번 데이터!', '사용자', NOW(), 'none');
+
+INSERT INTO spring_db.board (idx, title, content, writer, indate, image)
+VALUES (12, '12번 게시글', '6번 데이터!', '사용자', NOW(), 'none');
+
+
+-- =============================================================================
+-- 26-03-05 새로 업데이트한 홈페이지에 데이터 집어넣기
+-- =============================================================================
+
+
+-- 2. 진짜 서비스 같은 고퀄리티 여행 게시글 10개를 한 번에 추가합니다.
+INSERT INTO spring_db.board (title, content, writer, indate, image) VALUES 
+('도쿄 타워가 보이는 숨겨진 명당 카페', '시부야 스카이도 좋지만, 롯폰기 힐즈 근처 골목에 있는 작은 카페에서 보는 도쿄 타워 뷰가 정말 환상적입니다. 조용하게 커피 한잔하며 야경을 즐기고 싶은 분들께 강력 추천해요!', '야경사냥꾼', NOW(), 'none'),
+('제주도 3박 4일 스쿠터 여행 완벽 코스', '해안도로를 따라 달리는 스쿠터 여행은 자동차와는 또 다른 매력이 있습니다. 협재에서 시작해 애월, 산방산까지 이어지는 코스와 숨겨진 도민 맛집 리스트를 공유합니다.', '바람과함께', NOW(), 'none'),
+('파리 에펠탑 피크닉, 돗자리 펴기 좋은 곳', '마르스 광장 쪽은 사람이 너무 많아서 소매치기 위험도 있고 시끄러워요. 대신 센 강 건너편 잔디밭을 추천합니다. 와인 한 잔과 바게트만 있으면 천국이 따로 없죠.', '봉쥬르파리', NOW(), 'none'),
+('나홀로 다녀온 오사카 2박 3일 먹방 투어', '도톤보리의 유명한 다코야키부터, 골목길에 숨어있는 현지인 오코노미야키 맛집까지 다 털고 왔습니다. 혼자 가도 전혀 외롭지 않은 식당 위주로 정리해봤어요.', '고독한미식가', NOW(), 'none'),
+('스위스 융프라우 대신 선택한 쉴튼호른', '융프라우는 비싸고 사람이 많다고 해서 쉴튼호른으로 다녀왔는데, 정말 탁월한 선택이었습니다. 360도 회전 레스토랑에서 먹은 햄버거 맛은 평생 잊지 못할 거예요.', '알프스소녀', NOW(), 'none'),
+('방콕 카오산로드 생존기 & 마사지샵 추천', '코로나 이후 다시 찾은 방콕은 여전히 활기찼습니다. 1일 1마사지는 기본이죠! 가성비 최고였던 로컬 마사지샵 3곳의 위치와 가격 정보 남깁니다.', '타이러버', NOW(), 'none'),
+('아이슬란드 링로드 렌트카 여행 주의사항', '변덕스러운 날씨 때문에 고생도 했지만, 눈앞에 펼쳐지는 빙하와 폭포는 경이로움 그 자체였습니다. 겨울철 렌트카 예약 시 반드시 체크해야 할 보험 항목들 정리했어요.', '탐험가', NOW(), 'none'),
+('부산 해운대 요트 투어, 돈이 아깝지 않네요', '해질녘에 맞춰서 요트를 탔는데, 광안대교에 불이 들어오는 순간 정말 로맨틱했습니다. 부모님 모시고 갔는데 너무 좋아하셔서 뿌듯했어요.', '효자여행러', NOW(), 'none'),
+('뉴욕 센트럴파크 자전거 대여 꿀팁', '하루 종일 걸어 다니기엔 너무 넓은 센트럴파크! 미리 앱으로 자전거를 예약하면 훨씬 저렴합니다. 베데스다 테라스 근처에서 찍은 인생샷 명소도 알려드릴게요.', '빅애플', NOW(), 'none'),
+('베트남 다낭 미케해변 근처 가성비 숙소', '1박에 5만 원도 안 하는 가격에 루프탑 수영장까지 있는 호텔을 발견했습니다. 조식도 쌀국수가 나오는데 퀄리티가 꽤 괜찮았어요. 링크 남겨둘게요.', '짠내투어', NOW(), 'none');
+
+
