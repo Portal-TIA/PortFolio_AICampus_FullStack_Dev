@@ -1,4 +1,4 @@
-<h1>데이터 기반 여행 정보관련 웹 커뮤니티서비스</h1>
+<h1>여행 정보관련 웹 커뮤니티서비스</h1>
 <h2>팀명 : Full-Stack-Dev</h2>
 <h2>🚀 기술스택 </h2>
 <p><a target="_blank" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" style="display: inline-block;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="42" height="42" /></a>
